@@ -1,0 +1,15 @@
+<app-header titulo="Favoritos"></app-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+    <ion-slides [options]="sliderOpts" *ngIf="localheroeService.heroes.length === 0 && localvillanoService.villanos.length === 0 ">
+
+        <ion-slide>
+            <h1>No Hay Favoritos</h1>
+        </ion-slide>
+    </ion-slides>
+
+    <app-heroe *ngIf="localheroeService.heroes.length > 0 " [enFavoritos]="true" [heroes]="localheroeService.heroes"> </app-heroe>
+    <app-villano *ngIf="localvillanoService.villanos.length > 0 " [enFavoritos]="true" [villanos]="localvillanoService.villanos"> </app-villano>
+
+</ion-content>

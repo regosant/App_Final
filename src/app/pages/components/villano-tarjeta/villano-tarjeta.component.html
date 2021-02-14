@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border" translucent>
+    <ion-card>
+
+        <ion-card-subtitle>
+            <div>
+                <ion-button (click)="lanzarMenu()" fill="clear">
+                    <ion-icon slot="icon-only" name="caret-down-circle"></ion-icon>
+                </ion-button>
+            </div>
+        </ion-card-subtitle>
+
+        <img [src]="villano.img" [alt]="villano.nombre">
+        <ion-card-header>
+            <ion-card-subtitle>{{villano.aparicion}}</ion-card-subtitle>
+            <ion-card-title> {{villano.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{villano.bio}}
+        </ion-card-content>
+
+    </ion-card>
+</ion-header>

@@ -1,0 +1,15 @@
+<app-header titulo="Heroes Marvel y Dc"></app-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+    <ion-row>
+
+        <ion-col *ngFor="let heroe of heroes; let i = index; " size="12" size-lg="3" size-md="4" size-sm="2" size-xs="12">
+
+            <app-heroe-tarjeta [heroe]="heroe" [indice]="i"></app-heroe-tarjeta>
+
+        </ion-col>
+
+    </ion-row>
+
+</ion-content>
